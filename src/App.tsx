@@ -1,5 +1,7 @@
 import { FunctionComponent } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import Tabs from './components/Tabs';
 import './App.css';
 
 class Test {
@@ -13,7 +15,7 @@ const App: FunctionComponent = () => {
   const test = new Test();
   console.log(test);
   console.log(test.test);
-  return (
+  const Main = (
     <div className="App">
       <header className="App-header">
         <p>
@@ -29,6 +31,13 @@ const App: FunctionComponent = () => {
         </a>
       </header>
     </div>
+  );
+  
+  return (
+    <Routes>
+      <Route path="/" element={Main} />
+      <Route path="/test" element={<Tabs />} />
+    </Routes>
   );
 }
 
