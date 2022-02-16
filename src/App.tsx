@@ -1,11 +1,21 @@
-import logo from './logo.svg';
+import { FunctionComponent } from 'react';
+
 import './App.css';
 
-function App() {
+class Test {
+  test: string;
+  constructor() {
+    this.test = 'test';
+  }
+}
+
+const App: FunctionComponent = () => {
+  const test = new Test();
+  console.log(test);
+  console.log(test.test);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
