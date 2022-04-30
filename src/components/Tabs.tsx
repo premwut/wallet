@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 
 const Tabs: FunctionComponent = () => {
     return (
-        <h1>Tabs Component!</h1>
+        <h1><i className="fa fa-plus"></i>Tabs Component!</h1>
     )
 }
 
